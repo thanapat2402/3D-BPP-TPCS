@@ -1,11 +1,12 @@
 from constants import *
 
 class Item:
-    def __init__(self, name, length, width, height):
+    def __init__(self, name:str, length:int, width:int, height:int,color:str):
         self.name = name
         self.length = length
         self.height = height
         self.width = width
+        self.color = color
         self.rotation_type = 0 # initial rotation type: (x, y, z) --> (l, w, h)
         self.position =  START_POSITION # initial position: (0, 0, 0)
         
@@ -31,7 +32,7 @@ class Item:
         
         return dimension
         
-    def string(self):
+    def __str__(self):
         dx,dy,dz = self.get_dimension()
         rotation_list = ["LWH","HLW","HLW","WHL","WLH","LHW"]
         return "%s(%sx%sx%s) pos(%s) rt(%s) vol(%s)" % (

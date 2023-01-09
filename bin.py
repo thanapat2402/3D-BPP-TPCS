@@ -3,7 +3,7 @@ from helper import *
 from item import Item
 
 class Bin:
-    def __init__(self, size, length, width, height ):
+    def __init__(self, size:str, length:int, width:int, height:int ):
         self.size = size 
         self.length = length
         self.width = width
@@ -27,7 +27,7 @@ class Bin:
         total_filling_ratio = total_filling_volume / self.get_volume()
         return (total_filling_ratio)
     
-    def can_hold_item_with_rotation(self, item:Item, pivot): 
+    def can_hold_item_with_rotation(self, item:Item, pivot:list[int]): 
         """Evaluate whether one item can be placed into bin with all optional orientations.
         Args:
             item: any item in item list.
@@ -67,7 +67,7 @@ class Bin:
         
         return rotation_type_list 
 
-    def put_item(self, item:Item, pivot, distance_3d): 
+    def put_item(self, item:Item, pivot:list[int], distance_3d:list[int]): 
         """Evaluate whether an item can be placed into a certain bin with which orientation. If yes, perform put action.
         Args:
             item: any item in item list.
@@ -178,7 +178,8 @@ class Bin:
                         
                         p += 1
         
-    def string(self):
+    def __str__(self):
         return "%s(%sx%sx%s) vol(%s) item_number(%s) filling_ratio(%s)" % (
-            self.size, self.length, self.width, self.height,self.get_volume(), self.total_items, self.get_filling_ratio()
+            self.size, self.length, self.width, self.height,self.get_volume(),
+            self.total_items, self.get_filling_ratio()
             )

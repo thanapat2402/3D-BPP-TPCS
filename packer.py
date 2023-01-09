@@ -381,15 +381,7 @@ class Packer:
             return can_put
 
     def init_item(self,item:Item):
-        # new_item = Item(name="",width=0,length=0,height=0)
-        # new_item.name = item.name 
-        # new_item.width = item.width
-        # new_item.length = item.length
-        # new_item.height = item.height
-        # new_item.rotation_type = 0
-        # new_item.position = START_POSITION
-
-        return Item(item.name,item.length,item.width,item.height)
+        return Item(item.name,item.length,item.width,item.height,item.color)
     
     def pack_to_bin(self, bin:Bin, item:Item): 
         """For each item and each bin, perform whole pack process with optimal orientation and pivot point.
@@ -459,10 +451,10 @@ class Packer:
             if len(bin.items) == self.total_items:
                 self.available_bins.append(bin)
                 print("\n----------------------------------\n")
-                print("\n:::::::::::", bin.string())
+                print("\n:::::::::::", bin)
                 print("FITTED ITEMS:")
                 for item in bin.items:
-                    print("====> ", item.string())
+                    print("====> ", item)
                 
                 plot.draw(bin)
                 # print("\nUNFITTED ITEMS:")

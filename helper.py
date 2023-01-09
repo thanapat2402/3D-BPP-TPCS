@@ -37,59 +37,59 @@ def intersect(item1:Item, item2:Item):
     rect_intersect(item1, item2, Axis.HEIGHT, Axis.WIDTH) and # yz dimension
     rect_intersect(item1, item2, Axis.LENGTH, Axis.WIDTH)) # xy dimension
 
-def stack(item1:Item, item2:Item):
-    """Stack two items with same length, width, height or any two of three sides are same.
-    Args:
-        item1, item2: any two items in item list.
-    Return:
-        item1/ stacked_item_list/ stacked_item.
-    """
+# def stack(item1:Item, item2:Item):
+#     """Stack two items with same length, width, height or any two of three sides are same.
+#     Args:
+#         item1, item2: any two items in item list.
+#     Return:
+#         item1/ stacked_item_list/ stacked_item.
+#     """
     
-    if (
-        item1.length == item2.length and
-        item1.width == item2.width and
-        item1.height == item2.height
-    ):
-        stacked_item_1 = Item(item1.name + item2.name, item1.length + item2.length, 
-                              item1.width, item1.height) #(2l, w, h)
-        stacked_item_2 = Item(item1.name + item2.name, item1.length, item1.width + item2.width, 
-                              item1.height) #(l, 2w, h)
-        stacked_item_3 = Item(item1.name + item2.name, item1.length, item1.width, 
-                              item1.height + item2.height) #(l, w, 2h)
+#     if (
+#         item1.length == item2.length and
+#         item1.width == item2.width and
+#         item1.height == item2.height
+#     ):
+#         stacked_item_1 = Item(item1.name + item2.name, item1.length + item2.length, 
+#                               item1.width, item1.height) #(2l, w, h)
+#         stacked_item_2 = Item(item1.name + item2.name, item1.length, item1.width + item2.width, 
+#                               item1.height) #(l, 2w, h)
+#         stacked_item_3 = Item(item1.name + item2.name, item1.length, item1.width, 
+#                               item1.height + item2.height) #(l, w, 2h)
         
-        stacked_item_list = [stacked_item_1, stacked_item_2, stacked_item_3]
+#         stacked_item_list = [stacked_item_1, stacked_item_2, stacked_item_3]
         
-        return stacked_item_list
+#         return stacked_item_list
         
-    elif ( 
-        item1.length == item2.length and
-        item1.width == item2.width and
-        item1.height != item2.height
-    ):
-        stacked_item = Item(item1.name + item2.name, item1.length, item1.width, 
-                            item1.height + item2.height) #(l, w, 2h)
+#     elif ( 
+#         item1.length == item2.length and
+#         item1.width == item2.width and
+#         item1.height != item2.height
+#     ):
+#         stacked_item = Item(item1.name + item2.name, item1.length, item1.width, 
+#                             item1.height + item2.height) #(l, w, 2h)
         
-        return stacked_item
+#         return stacked_item
     
-    elif (
-        item1.length == item2.length and 
-        item1.height == item2.height and
-        item1.width != item2.width
-    ):
-        stacked_item = Item(item1.name + item2.name, item1.length, item1.width + item2.width, 
-                            item1.height) #(l, 2w, h)
+#     elif (
+#         item1.length == item2.length and 
+#         item1.height == item2.height and
+#         item1.width != item2.width
+#     ):
+#         stacked_item = Item(item1.name + item2.name, item1.length, item1.width + item2.width, 
+#                             item1.height) #(l, 2w, h)
         
-        return stacked_item
+#         return stacked_item
     
-    elif (
-        item1.width == item2.width and
-        item1.height == item2.height and
-        item1.length != item2.length
-    ):
-        stacked_item = Item(item1.name + item2.name, item1.length + item2.length, 
-                            item1.width, item1.height)
+#     elif (
+#         item1.width == item2.width and
+#         item1.height == item2.height and
+#         item1.length != item2.length
+#     ):
+#         stacked_item = Item(item1.name + item2.name, item1.length + item2.length, 
+#                             item1.width, item1.height)
         
-        return stacked_item #(2l, w, h)
+#         return stacked_item #(2l, w, h)
     
-    else:
-        return item1
+#     else:
+#         return item1
