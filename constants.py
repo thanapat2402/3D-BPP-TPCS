@@ -1,4 +1,5 @@
 START_POSITION = [0, 0, 0]
+MAX_DIMENSION = [500,500,500]
 
 class RotationType :
     RT_LWH = 0

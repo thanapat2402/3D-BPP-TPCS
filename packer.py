@@ -377,7 +377,18 @@ class Packer:
         
         if not pivot_available:
             return can_put
-        
+
+    def init_item(self,item:Item):
+        # new_item = Item(name="",width=0,length=0,height=0)
+        # new_item.name = item.name 
+        # new_item.width = item.width
+        # new_item.length = item.length
+        # new_item.height = item.height
+        # new_item.rotation_type = 0
+        # new_item.position = START_POSITION
+
+        return Item(item.name,item.length,item.width,item.height)
+    
     def pack_to_bin(self, bin:Bin, item:Item): 
         """For each item and each bin, perform whole pack process with optimal orientation and pivot point.
         Args:
@@ -385,7 +396,7 @@ class Packer:
             item: an unplaced item in item list.
         Returns: return value is void.
         """
-        
+        item = self.init_item(item)
         if not bin.items:
             response = bin.put_item(item, START_POSITION, [bin.length, bin.width, bin.height])
             

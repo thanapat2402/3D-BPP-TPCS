@@ -32,7 +32,8 @@ class Item:
         return dimension
         
     def string(self):
+        dx,dy,dz = self.get_dimension()
         rotation_list = ["LWH","HLW","HLW","WHL","WLH","LHW"]
-        return "%s(%sx%sx%s,) pos(%s) rt(%s) vol(%s)" % (
-            self.name, self.length, self.width, self.height,self.position, rotation_list[self.rotation_type], self.get_volume()
+        return "%s(%sx%sx%s) pos(%s) rt(%s) vol(%s)" % (
+            self.name, dx, dy, dz,self.position, rotation_list[self.rotation_type], self.get_volume()
         )

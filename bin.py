@@ -8,6 +8,7 @@ class Bin:
         self.length = length
         self.width = width
         self.height = height
+        self.dimension = [length,width,height]
         self.total_items = 0 # number of total items in one bin
         self.items:list[Item] = [] # item in one bin -- a blank list initially
         self.unplaced_items:list[Item] = []
