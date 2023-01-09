@@ -2,6 +2,8 @@ from constants import *
 from helper import *
 from item import Item
 from bin import Bin
+from plot import Plot
+plot = Plot()
 
 class Packer:
     def __init__(self):
@@ -462,6 +464,7 @@ class Packer:
                 for item in bin.items:
                     print("====> ", item.string())
                 
+                plot.draw(bin)
                 # print("\nUNFITTED ITEMS:")
                 # for item in bin.unfitted_items:
                 #     print("====> ", item.string()) 
