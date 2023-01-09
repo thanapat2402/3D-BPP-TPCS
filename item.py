@@ -5,6 +5,7 @@ class Item:
         self.name = name
         self.length = length
         self.height = height
+        self.width = width
         self.rotation_type = 0 # initial rotation type: (x, y, z) --> (l, w, h)
         self.position =  START_POSITION # initial position: (0, 0, 0)
         

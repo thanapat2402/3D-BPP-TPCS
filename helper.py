@@ -37,7 +37,7 @@ def intersect(item1:Item, item2:Item):
     rect_intersect(item1, item2, Axis.HEIGHT, Axis.WIDTH) and # yz dimension
     rect_intersect(item1, item2, Axis.LENGTH, Axis.WIDTH)) # xy dimension
 
-def stack(item1, item2):
+def stack(item1:Item, item2:Item):
     """Stack two items with same length, width, height or any two of three sides are same.
     Args:
         item1, item2: any two items in item list.

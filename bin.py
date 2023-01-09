@@ -3,12 +3,11 @@ from helper import *
 from item import Item
 
 class Bin:
-    def __init__(self, size, length, width, height, capacity):
+    def __init__(self, size, length, width, height ):
         self.size = size 
         self.length = length
         self.width = width
         self.height = height
-        self.capacity = capacity
         self.total_items = 0 # number of total items in one bin
         self.items:list[Item] = [] # item in one bin -- a blank list initially
         self.unplaced_items:list[Item] = []
