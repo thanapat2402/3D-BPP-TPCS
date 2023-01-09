@@ -179,6 +179,6 @@ class Bin:
                         p += 1
         
     def string(self):
-        return "%s(%sx%sx%s, max_weight:%s) vol(%s) item_number(%s) filling_ratio(%s)" % (
-            self.size, self.length, self.width, self.height, self.capacity,
-            self.get_volume(), self.total_items, self.get_filling_ratio())
+        return "%s(%sx%sx%s) vol(%s) item_number(%s) filling_ratio(%s)" % (
+            self.size, self.length, self.width, self.height,self.get_volume(), self.total_items, self.get_filling_ratio()
+            )

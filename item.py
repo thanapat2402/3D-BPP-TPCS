@@ -1,12 +1,10 @@
 from constants import *
 
 class Item:
-    def __init__(self, name, length, width, height, weight):
+    def __init__(self, name, length, width, height):
         self.name = name
         self.length = length
-        self.width = width
         self.height = height
-        self.weight = weight
         self.rotation_type = 0 # initial rotation type: (x, y, z) --> (l, w, h)
         self.position =  START_POSITION # initial position: (0, 0, 0)
         
@@ -34,7 +32,6 @@ class Item:
         
     def string(self):
         rotation_list = ["LWH","HLW","HLW","WHL","WLH","LHW"]
-        return "%s(%sx%sx%s, weight: %s) pos(%s) rt(%s) vol(%s)" % (
-            self.name, self.length, self.width, self.height, self.weight,
-            self.position, rotation_list[self.rotation_type], self.get_volume()
+        return "%s(%sx%sx%s,) pos(%s) rt(%s) vol(%s)" % (
+            self.name, self.length, self.width, self.height,self.position, rotation_list[self.rotation_type], self.get_volume()
         )
