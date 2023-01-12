@@ -1,4 +1,4 @@
-# 3D-Bin-Packing_Problem
+# 3D-Bin-Packing-Problem
 This project created to solving 3D-Bin-Packing-Problem by find the minimun size of shipping box that can contained all items in one box (without weight).
 This project imprementation based on :
 * Janet-19/3d-bin-packing-problem. https://github.com/Janet-19/3d-bin-packing-problem
