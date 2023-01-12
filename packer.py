@@ -396,7 +396,7 @@ class Packer:
             
             if not response:
                 bin.unfitted_items.append(item)
-            
+                                      
             return 
         
         else:
