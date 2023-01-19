@@ -448,7 +448,7 @@ class Packer:
                 print(bin.size, sep=" ", end=" ",flush=True)
                 
         for bin in self.bins:
-            if len(bin.items) == self.total_items:
+            if bin.total_items == self.total_items:
                 self.available_bins.append(bin)
                 print("\n----------------------------------\n")
                 print("\n:::::::::::", bin)

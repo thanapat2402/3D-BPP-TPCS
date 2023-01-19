@@ -10,17 +10,21 @@ def rect_intersect(item1:Item, item2:Item, x, y):
         Boolean variable: False when two items get intersection in one dimension; True when two items do not intersect in one dimension.
     """
     
+    "get dimension of each item"
     d1 = item1.get_dimension() 
     d2 = item2.get_dimension() 
     
+    "get center of each item with its position"
     cx1 = item1.position[x] + d1[x]/2 
     cy1 = item1.position[y] + d1[y]/2
     cx2 = item2.position[x] + d2[x]/2 
     cy2 = item2.position[y] + d2[y]/2
     
+    "get the intersection of x and y axis"
     ix = max(cx1, cx2) - min(cx1, cx2) # ix: |cx1-cx2|
     iy = max(cy1, cy2) - min(cy1, cy2) # iy: |cy1-cy2|
     
+    "return boolean true if there are not overlap and false if it overlap"
     return ix < (d1[x] + d2[x])/2 and iy < (d1[y] + d2[y])/2 
 
 
